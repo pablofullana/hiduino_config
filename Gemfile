@@ -37,8 +37,10 @@ gem 'slim-rails'
 gem 'simple_form'
 gem 'chosen-rails', '~> 1.4.2'
 
+
 group :development, :test do
   gem 'pry-rails'
+  gem 'rspec-rails', '~> 3.0'
 end
 
 group :development do
