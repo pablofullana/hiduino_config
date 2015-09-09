@@ -1,0 +1,51 @@
+.container
+  .row
+    .span12
+      fieldset
+        legend Customize your Hiduino
+        #form= simple_form_for :firmware, url: firmwares_create_path, remote: true do |f|
+          .control-group
+            = f.input :manufacturer_name
+          .control-group
+            = f.input :device_name, required: true
+          .control-group
+            = f.input :arduino_model, as: :select, collection: @arduino_models, label_method: lambda{ |m| m.humanize }, required: true, input_html: { title: 'Please select a model', class: 'selectpicker'}
+          .control-group
+            .controls
+              = f.button :submit, 'Get it!', class: 'btn btn-success', id: 'submit-button', data: {'disable-with': 'Processing...' }
+
+/
+/ javascript:
+/   function saveTextAsFile(manufacturerName, deviceName, fileContent){
+/   	var textToWrite = fileContent;
+/   	var textFileAsBlob = new Blob([textToWrite], {type:'text/plain'});
+/   	var fileNameToSaveAs = deviceName;
+/
+/   	var downloadLink = document.createElement("a");
+/   	downloadLink.download = fileNameToSaveAs;
+/   	downloadLink.innerHTML = "Download File";
+/
+/     downloadLink.href = window.URL.createObjectURL(textFileAsBlob);
+/ 		downloadLink.onclick = destroyClickedElement;
+/ 		downloadLink.style.display = "none";
+/ 		document.body.appendChild(downloadLink);
+/
+/   	downloadLink.click();
+/   }
+/
+/   function destroyClickedElement(event){
+/     document.body.removeChild(event.target);
+/   }
+/
+/   function ready(){
+/     textFile = null;
+/
+/     $("#form").on("ajax:success", function(target, response) {
+/       saveTextAsFile('a', 'test', response);
+/     });
+/     $("#form").on("ajax:error", function(target, response) {
+/       console.log('mal!');
+/     });
+/   }
+/
+/   $(document).on('ready page:load', ready);
