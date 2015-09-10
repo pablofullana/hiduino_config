@@ -38,6 +38,47 @@ GEM
       tzinfo (~> 1.1)
     arel (6.0.3)
     builder (3.2.2)
+    celluloid (0.17.1.2)
+      bundler
+      celluloid-essentials
+      celluloid-extras
+      celluloid-fsm
+      celluloid-pool
+      celluloid-supervision
+      dotenv
+      nenv
+      rspec-logsplit (>= 0.1.2)
+      timers (>= 4.1.1)
+    celluloid-essentials (0.20.2.1)
+      bundler
+      dotenv
+      nenv
+      rspec-logsplit (>= 0.1.2)
+      timers (>= 4.1.1)
+    celluloid-extras (0.20.1)
+      bundler
+      dotenv
+      nenv
+      rspec-logsplit (>= 0.1.2)
+      timers (>= 4.1.1)
+    celluloid-fsm (0.20.1)
+      bundler
+      dotenv
+      nenv
+      rspec-logsplit (>= 0.1.2)
+      timers (>= 4.1.1)
+    celluloid-pool (0.20.1)
+      bundler
+      dotenv
+      nenv
+      rspec-logsplit (>= 0.1.2)
+      timers (>= 4.1.1)
+    celluloid-supervision (0.20.1.1)
+      bundler
+      dotenv
+      nenv
+      rspec-logsplit (>= 0.1.2)
+      timers (>= 4.1.1)
     chosen-rails (1.4.2)
       coffee-rails (>= 3.2)
       compass-rails (>= 2.0.4)
@@ -68,13 +109,16 @@ GEM
       compass (~> 1.0.0)
       sass-rails (< 5.1)
       sprockets (< 2.13)
+    connection_pool (2.2.0)
     diff-lcs (1.2.5)
+    dotenv (2.0.2)
     erubis (2.7.0)
     execjs (2.6.0)
     ffi (1.9.10)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
     hike (1.2.3)
+    hitimes (1.2.2)
     i18n (0.7.0)
     jbuilder (2.3.1)
       activesupport (>= 3.0.0, < 5)
@@ -93,6 +137,7 @@ GEM
     mini_portile (0.6.2)
     minitest (5.8.0)
     multi_json (1.11.2)
+    nenv (0.2.0)
     nokogiri (1.6.6.2)
       mini_portile (~> 0.6.0)
     pry (0.10.1)
@@ -133,11 +178,15 @@ GEM
     rb-inotify (0.9.5)
       ffi (>= 0.5.0)
     rdoc (4.2.0)
+    redis (3.2.1)
+    redis-namespace (1.5.2)
+      redis (~> 3.0, >= 3.0.4)
     rspec-core (3.3.2)
       rspec-support (~> 3.3.0)
     rspec-expectations (3.3.1)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.3.0)
+    rspec-logsplit (0.1.3)
     rspec-mocks (3.3.2)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.3.0)
@@ -160,6 +209,12 @@ GEM
     sdoc (0.4.1)
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
+    sidekiq (3.5.0)
+      celluloid (~> 0.17.0)
+      connection_pool (~> 2.2, >= 2.2.0)
+      json (~> 1.0)
+      redis (~> 3.2, >= 3.2.1)
+      redis-namespace (~> 1.5, >= 1.5.2)
     simple_form (3.1.1)
       actionpack (~> 4.0)
       activemodel (~> 4.0)
@@ -188,6 +243,8 @@ GEM
     thor (0.19.1)
     thread_safe (0.3.5)
     tilt (1.4.1)
+    timers (4.1.1)
+      hitimes
     turbolinks (2.5.3)
       coffee-rails
     tzinfo (1.2.2)
@@ -209,6 +266,7 @@ DEPENDENCIES
   rspec-rails (~> 3.0)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
+  sidekiq
   simple_form
   slim-rails
   spring
