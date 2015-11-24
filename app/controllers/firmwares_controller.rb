@@ -5,8 +5,10 @@ class FirmwaresController < ApplicationController
 
   def create
     firmware = Firmware.new firmware_params
-  
-    send_data firmware.generate_hex_file
+    # hex_file = firmware.generate_hex_file
+    hex_file = File.read File.join(Rails.root, 'config', 'routes.rb')
+
+    send_data hex_file, filename: "output.hex", type: :text
   end
 
 

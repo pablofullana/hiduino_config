@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
-  get   'firmwares/new'
-  post  'firmwares/create'
+  resources :firmwares, only: [:new, :create]
 
-  # root 'welcome#index'
+  root  'firmwares#new'
 end
