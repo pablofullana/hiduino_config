@@ -5,7 +5,8 @@ class FirmwaresController < ApplicationController
 
   def create
     firmware = Firmware.new firmware_params
-    firmware.generate_code
+  
+    send_data firmware.generate_hex_file
   end
 
 
