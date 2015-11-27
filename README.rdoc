@@ -1,28 +1,21 @@
-== README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+=== Prerequisites
+1. Make sure *ruby 2.2.3* is installed. Either *rvm* or *rbenv* will do the trick
+  * https://rvm.io
+  * https://github.com/rbenv/rbenv
+2. Make sure bundler gem is installed. Hint: <tt>gem install bundler</tt>
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+=== Installation
+Install the application by running: bundle install
+
+
+=== Run it!
+Run the application by simply running: bundle exec rails server
+
+
+=== Share it (as quickly as possible)
+*Note:* This is not production!
+
+You can expose the port where the application is running at (defaulted to 3000) using ngrok
+1. Install *ngrok*. Installation details at: https://ngrok.com
+2. Expose application portby running: <tt>ngrok 3000</tt>
