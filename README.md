@@ -19,4 +19,4 @@ Run the application by simply running: `bundle exec rails server`
 You can expose the port where the application is running at (defaulted to 3000) using ngrok:
 
 1. Install **ngrok**. Installation details at: https://ngrok.com
-2. Expose application portby running: `ngrok 3000`
+2. Expose application portby running: `ngrok http 3000`
