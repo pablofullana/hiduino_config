@@ -14,34 +14,44 @@ class Firmware
   validates :arduino_model, inclusion: { in: self.arduino_models,
     message: "%{value} is not a valid arduino_model" }
 
+  def arduino_model_pid(arduino_model)
+    case self.arduino_model
+    when 'uno'
+      arduino_model_pid = '0x0001'
+    when 'mega'
+      arduino_model_pid = '0x0010'
+    else
+      arduino_model_pid = '0x0000'
+    end
+
+    return arduino_model_pid
+  end
+
   def generate_hex_file
     firmware_path = File.join(Rails.root, 'tmp', 'firmwares', SecureRandom.uuid)
     FileUtils.mkdir_p firmware_path
     FileUtils.cp_r File.join(Rails.root, 'lib', 'assets', 'hiduino-master') ,firmware_path
 
-    project_directory = File.join(firmware_path, 'hiduino-master', 'LUFA-140928', 'Projects', 'arduino_midi')
-    system "make -C #{project_directory}"
+    project_directory_path = File.join(firmware_path, 'hiduino-master', 'LUFA-140928', 'Projects', 'arduino_midi')    
 
-    hex_file_content = File.read File.join(project_directory, 'arduino_midi.hex')
-    
-    # FirmwareCreationJob.perform_later(self.manufacturer_name, self.device_name, self.arduino_model)
-    
     # Descriptors
-    # dir_path = File.join(Rails.root, 'app/assets/LUFA-140928/Projects/hiduino-master/src/arduino_midi')
-    # original_file_path = File.join(dir_path, 'Descriptors_original.c')
-    # content = File.read(original_file_path)
-    # new_content = content.gsub(/{{PRODUCT_STRING}}/, self.device_name)
-    # new_content = new_content.gsub(/{{MANUFACTURER_STRING}}/, self.manufacturer_name)
-    # new_file_path = File.join(dir_path, 'Descriptors.c')
-    # File.open(new_file_path, "w") {|file| file.puts new_content }
+    descriptors_file_path = File.join(project_directory_path, 'Descriptors.c')
+    content = File.read(descriptors_file_path)
+    new_content = content.gsub(/{{PRODUCT_STRING}}/, self.device_name)
+    new_content = new_content.gsub(/{{MANUFACTURER_STRING}}/, self.manufacturer_name)
+    File.open(descriptors_file_path, "w") { |file| file.puts new_content }
 
     # Makefile
-    # dir_path = File.join(Rails.root, 'app/assets/LUFA-140928/Projects/hiduino-master/src/arduino_midi')
-    # original_file_path = File.join(dir_path, 'makefile_original')
-    # content = File.read(original_file_path)
-    # new_content = content.gsub(/{{ARDUINO_MODEL_PID}}/, self.arduino_model)
-    # new_file_path = File.join(dir_path, 'makefile')
-    # File.open(new_file_path, "w") {|file| file.puts new_content }
+    make_file_path = File.join(project_directory_path, 'makefile')
+    content = File.read(make_file_path)
+    new_content = content.gsub(/{{ARDUINO_MODEL_PID}}/, self.arduino_model_pid(self.arduino_model))
+    File.open(make_file_path, "w") {|file| file.puts new_content }
+
+    # Make
+    system "make -C #{project_directory_path}"
+    hex_file_content = File.read File.join(project_directory_path, 'arduino_midi.hex')
+
+    # Cleanup
     FileUtils.rm_rf firmware_path
 
     return hex_file_content

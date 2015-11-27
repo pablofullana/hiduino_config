@@ -33,7 +33,7 @@ CC_FLAGS += -DAVR_ERASE_LINE_MASK="(1 << 6)"
 
 # Optional Variables 
 AVRDUDE_PROGRAMMER = avrisp2
-ARDUINO_MODEL_PID = 0x0010
+ARDUINO_MODEL_PID = {{ARDUINO_MODEL_PID}}
 
 # Default target
 all:
