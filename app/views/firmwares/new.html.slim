@@ -21,14 +21,18 @@
 javascript:
   var ready = function() {
     hideMessage();
-    $("#submit-button").click(function(event) {
+    $("#form").on("submit", function() {
+      hideButton();
       displayMessage();
     });
   };
 
-  var displayMessage = function() {
+  var hideButton = function() {
     $("#submit-button").attr("disabled", "");
     $("#submit-button").hide();
+  }
+
+  var displayMessage = function() {
     $("#message").show();
   }
 
