@@ -20,3 +20,6 @@ You can expose the port where the application is running at (defaulted to 3000) 
 
 1. Install **ngrok**. Installation details at: https://ngrok.com
 2. Expose application portby running: `ngrok http 3000`
+
+### Next Spteps:
+While this version seems to be working fine, performance wasn't taken into account. Next versions will put focus on that area and some other features.
