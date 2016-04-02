@@ -48,7 +48,7 @@ class Firmware
     File.open(make_file_path, "w") {|file| file.puts new_content }
 
     # Make
-    system "make -C #{project_directory_path}"
+    system "sudo make -C #{project_directory_path}"
     hex_file_content = File.read File.join(project_directory_path, 'arduino_midi.hex')
 
     # Cleanup

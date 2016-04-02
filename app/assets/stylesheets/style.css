@@ -1,0 +1,46 @@
+.container{
+  margin-top: 40px;
+}
+#info{
+  width:100%;
+  margin: auto;
+  margin-right: 30px;
+  float: left;
+}
+
+#description{
+  width: 50%;
+  float: left;
+  margin: auto;
+}
+#gotoytx{
+  margin: 10px; float:left;
+}
+#credits{
+  width:100%;
+  margin: auto;
+  margin-right: 30px;
+  float: left;
+}
+#credits-text{
+  width: 50%;
+  float: left;
+  margin: auto;
+}
+#gotohiduino{
+  margin: 10px;
+  float: left;
+}
+#gotohidapp{
+  margin: 10px;
+  float:left;
+}
+.btn-ytx{
+  background: #262324 !important;
+  border-color: #262324 !important;
+  -webkit-box-shadow: inset 0px 1px 0px #fff,0px 5px 0px #d46344,1px 7px 7px 3px rgba(0,0,0,0.3);
+  -moz-box-shadow: inset 0px 1px 0px #fff,0px 5px 0px #d46344,1px 7px 7px 3px rgba(0,0,0,0.3);
+  box-shadow: inset 0px 1px 0px #fff,0px 5px 0px #d46344,1px 7px 7px 3px rgba(0,0,0,0.3);
+  border-radius: 0px !important;
+}
+.btn-ytx:hover{color:#fff12c !important;}

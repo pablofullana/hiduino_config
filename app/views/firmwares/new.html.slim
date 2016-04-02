@@ -5,18 +5,35 @@
         legend Customize your Hiduino
         #form= simple_form_for :firmware, url: firmwares_path do |f|
           .control-group
-            = f.input :manufacturer_name
+            = f.input :manufacturer_name, maxlength: 11
           .control-group
-            = f.input :device_name, required: true
+            = f.input :device_name, required: true, maxlength: 11
           .control-group
             = f.input :arduino_model, as: :select, collection: @arduino_models, label_method: lambda{ |m| m.humanize }, required: true, input_html: { title: 'Please select a model', class: 'selectpicker'}
           .control-group
             .controls
-              = f.button :submit, 'Get it!', class: 'btn btn-success', id: 'submit-button', data: { 'disable-with': 'Processing...' }
+              = f.button :submit, 'Compile!', class: 'btn btn-success btn-ytx', id: 'submit-button', data: { 'disable-with': 'Processing...' }
         #message
           label Firmware is being created, please do not refresh this page. Thanks!
-          p= link_to 'Create a new firmaware', root_path
-
+          p= link_to 'Create a new firmaware', root_path, class: 'btn btn-success btn-ytx'
+	#info
+          br
+          #description
+            p= 'Pimp My Hiduino is a web tool that lets you compile the great HIDUINO firmware with whatever Device and Manufacturer name you want. Make your Arduino plug and play MIDI controllers look like professional hardware with HIDUINO + Pimp My Hiduino.'
+          #gotoytx
+            p= link_to 'Yaeltex.com', "http://www.yaeltex.com", class: 'btn btn-success btn-ytx', target: '_blank'
+	#credits
+          br
+          #credits-text
+            p= 'Credits:'
+            p= ' · HIDUINO firmware by Dimitri Diakopoulos.'
+            p= ' · PimpMyHiduino web tool by Pablo Fullana, Franco Grassano and Yaeltex.'
+            p= 'Visit HIDUINO website for more information.'
+            p= 'Have fun ;)'
+          #gotohiduino
+            p= link_to 'github project hiduino', "http://github.com/ddiakopoulos/hiduino/", class: 'btn btn-success btn-ytx', target: '_blank'
+          #gotohidapp
+            p= link_to 'github project hiduino-app', "https://github.com/pablofullana/hiduino_config", class: 'btn btn-success btn-ytx', target: '_blank'
 
 javascript:
   var ready = function() {

@@ -1,0 +1,47 @@
+.container
+  .row
+    .span12
+      fieldset
+        legend Customize your Hiduino
+        #form= simple_form_for :firmware, url: firmwares_path do |f|
+          .control-group
+            = f.input :manufacturer_name
+          .control-group
+            = f.input :device_name, required: true
+          .control-group
+            = f.input :arduino_model, as: :select, collection: @arduino_models, label_method: lambda{ |m| m.humanize }, required: true, input_html: { title: 'Please select a model', class: 'selectpicker'}
+          .control-group
+            .controls
+              = f.button :submit, 'Get it!', class: 'btn btn-success', id: 'submit-button', data: { 'disable-with': 'Processing...' }
+        #message
+          label Firmware is being created, please do not refresh this page. Thanks!
+          p= link_to 'Create a new firmaware', root_path
+	#siteytx
+		p= link_to 'yaeltex', "http://www.yaeltex.com", class="btn btn-default btn-ytx"
+
+
+javascript:
+  var ready = function() {
+    hideMessage();
+    $("#form").on("submit", function() {
+      hideButton();
+      displayMessage();
+    });
+  };
+
+  var hideButton = function() {
+    $("#submit-button").attr("disabled", "");
+    $("#submit-button").hide();
+  }
+
+  var displayMessage = function() {
+    $("#message").show();
+  }
+
+  var hideMessage = function() {
+    $("#message").hide();
+  }
+
+  $(document).ready(ready);
+  $(document).on('page:load', ready);
+  $(document).on('page:change', ready);

@@ -1,0 +1,73 @@
+2016/03/31 23:58:14 [emerg] 12830#0: bind() to 0.0.0.0:80 failed (98: Address already in use)
+2016/03/31 23:58:14 [emerg] 12830#0: bind() to 0.0.0.0:80 failed (98: Address already in use)
+2016/03/31 23:58:14 [emerg] 12830#0: bind() to 0.0.0.0:80 failed (98: Address already in use)
+2016/03/31 23:58:14 [emerg] 12830#0: bind() to 0.0.0.0:80 failed (98: Address already in use)
+2016/03/31 23:58:14 [emerg] 12830#0: bind() to 0.0.0.0:80 failed (98: Address already in use)
+2016/03/31 23:58:14 [emerg] 12830#0: still could not bind()
+[ 2016-04-01 00:42:21.6291 18210/7fc1f5fd77c0 age/Wat/WatchdogMain.cpp:1276 ]: Starting Passenger watchdog...
+[ 2016-04-01 00:42:21.6349 18213/7f5cc0e767c0 age/Cor/CoreMain.cpp:982 ]: Starting Passenger core...
+[ 2016-04-01 00:42:21.6350 18213/7f5cc0e767c0 age/Cor/CoreMain.cpp:235 ]: Passenger core running in multi-application mode.
+[ 2016-04-01 00:42:21.6364 18213/7f5cc0e767c0 age/Cor/CoreMain.cpp:732 ]: Passenger core online, PID 18213
+[ 2016-04-01 00:42:21.6423 18218/7f96616717c0 age/Ust/UstRouterMain.cpp:529 ]: Starting Passenger UstRouter...
+[ 2016-04-01 00:42:21.6429 18218/7f96616717c0 age/Ust/UstRouterMain.cpp:342 ]: Passenger UstRouter online, PID 18218
+2016/04/01 00:42:23 [error] 18228#0: *4 "/home/ubuntu/HiduinoWebApp/config/public/index.html" is not found (2: No such file or directory), client: 127.0.0.1, server: _, request: "HEAD / HTTP/1.1", host: "0.0.0.0"
+
+[ 2016-04-01 00:42:58.1387 18213/7f5cba6a8700 age/Cor/CoreMain.cpp:532 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ 2016-04-01 00:42:58.1387 18213/7f5cc0e767c0 age/Cor/CoreMain.cpp:901 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ 2016-04-01 00:42:58.1387 18213/7f5cb9ea7700 Ser/Server.h:817 ]: [ApiServer] Freed 0 spare client objects
+[ 2016-04-01 00:42:58.1387 18213/7f5cb9ea7700 Ser/Server.h:464 ]: [ApiServer] Shutdown finished
+[ 2016-04-01 00:42:58.1389 18213/7f5cba6a8700 Ser/Server.h:817 ]: [ServerThr.1] Freed 128 spare client objects
+[ 2016-04-01 00:42:58.1389 18213/7f5cba6a8700 Ser/Server.h:464 ]: [ServerThr.1] Shutdown finished
+[ 2016-04-01 00:42:58.1392 18213/7f5cc0e767c0 age/Cor/CoreMain.cpp:967 ]: Passenger core shutdown finished
+
+[ 2016-04-01 00:42:58.1398 18218/7f965ae68700 age/Ust/UstRouterMain.cpp:422 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ 2016-04-01 00:42:58.1398 18218/7f96616717c0 age/Ust/UstRouterMain.cpp:492 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ 2016-04-01 00:42:58.1398 18218/7f965a667700 Ser/Server.h:817 ]: [UstRouterApiServer] Freed 0 spare client objects
+[ 2016-04-01 00:42:58.1398 18218/7f965a667700 Ser/Server.h:464 ]: [UstRouterApiServer] Shutdown finished
+[ 2016-04-01 00:42:58.1399 18218/7f965ae68700 Ser/Server.h:464 ]: [UstRouter] Shutdown finished
+[ 2016-04-01 00:42:58.1400 18218/7f96616717c0 age/Ust/UstRouterMain.cpp:523 ]: Passenger UstRouter shutdown finished
+[ 2016-04-01 00:43:49.9145 18362/7f4b4c12b7c0 age/Wat/WatchdogMain.cpp:1276 ]: Starting Passenger watchdog...
+[ 2016-04-01 00:43:49.9206 18365/7fd8161a67c0 age/Cor/CoreMain.cpp:982 ]: Starting Passenger core...
+[ 2016-04-01 00:43:49.9207 18365/7fd8161a67c0 age/Cor/CoreMain.cpp:235 ]: Passenger core running in multi-application mode.
+[ 2016-04-01 00:43:49.9221 18365/7fd8161a67c0 age/Cor/CoreMain.cpp:732 ]: Passenger core online, PID 18365
+[ 2016-04-01 00:43:49.9281 18370/7f549b68a7c0 age/Ust/UstRouterMain.cpp:529 ]: Starting Passenger UstRouter...
+[ 2016-04-01 00:43:49.9287 18370/7f549b68a7c0 age/Ust/UstRouterMain.cpp:342 ]: Passenger UstRouter online, PID 18370
+2016/04/01 00:43:51 [error] 18380#0: *4 "/home/ubuntu/HiduinoWebApp/config/public/index.html" is not found (2: No such file or directory), client: 127.0.0.1, server: _, request: "HEAD / HTTP/1.1", host: "0.0.0.0"
+
+[ 2016-04-01 00:44:12.8788 18365/7fd80f9d8700 age/Cor/CoreMain.cpp:532 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ 2016-04-01 00:44:12.8788 18365/7fd8161a67c0 age/Cor/CoreMain.cpp:901 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ 2016-04-01 00:44:12.8789 18365/7fd80f1d7700 Ser/Server.h:817 ]: [ApiServer] Freed 0 spare client objects
+[ 2016-04-01 00:44:12.8789 18365/7fd80f1d7700 Ser/Server.h:464 ]: [ApiServer] Shutdown finished
+[ 2016-04-01 00:44:12.8790 18365/7fd80f9d8700 Ser/Server.h:817 ]: [ServerThr.1] Freed 128 spare client objects
+[ 2016-04-01 00:44:12.8790 18365/7fd80f9d8700 Ser/Server.h:464 ]: [ServerThr.1] Shutdown finished
+[ 2016-04-01 00:44:12.8794 18365/7fd8161a67c0 age/Cor/CoreMain.cpp:967 ]: Passenger core shutdown finished
+
+[ 2016-04-01 00:44:12.8799 18370/7f5494e81700 age/Ust/UstRouterMain.cpp:422 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ 2016-04-01 00:44:12.8799 18370/7f549b68a7c0 age/Ust/UstRouterMain.cpp:492 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ 2016-04-01 00:44:12.8800 18370/7f548ffff700 Ser/Server.h:817 ]: [UstRouterApiServer] Freed 0 spare client objects
+[ 2016-04-01 00:44:12.8800 18370/7f548ffff700 Ser/Server.h:464 ]: [UstRouterApiServer] Shutdown finished
+[ 2016-04-01 00:44:12.8801 18370/7f5494e81700 Ser/Server.h:464 ]: [UstRouter] Shutdown finished
+[ 2016-04-01 00:44:12.8803 18370/7f549b68a7c0 age/Ust/UstRouterMain.cpp:523 ]: Passenger UstRouter shutdown finished
+[ 2016-04-01 00:46:07.7022 18520/7f1ad84577c0 age/Wat/WatchdogMain.cpp:1276 ]: Starting Passenger watchdog...
+[ 2016-04-01 00:46:07.7085 18523/7fea397d27c0 age/Cor/CoreMain.cpp:982 ]: Starting Passenger core...
+[ 2016-04-01 00:46:07.7086 18523/7fea397d27c0 age/Cor/CoreMain.cpp:235 ]: Passenger core running in multi-application mode.
+[ 2016-04-01 00:46:07.7100 18523/7fea397d27c0 age/Cor/CoreMain.cpp:732 ]: Passenger core online, PID 18523
+[ 2016-04-01 00:46:07.7165 18528/7f0a5c36b7c0 age/Ust/UstRouterMain.cpp:529 ]: Starting Passenger UstRouter...
+[ 2016-04-01 00:46:07.7171 18528/7f0a5c36b7c0 age/Ust/UstRouterMain.cpp:342 ]: Passenger UstRouter online, PID 18528
+2016/04/01 00:46:09 [error] 18538#0: *4 "/home/ubuntu/HiduinoWebApp/config/public/index.html" is not found (2: No such file or directory), client: 127.0.0.1, server: _, request: "HEAD / HTTP/1.1", host: "0.0.0.0"
+2016/04/01 00:46:13 [error] 18538#0: *5 "/home/ubuntu/HiduinoWebApp/config/public/index.html" is not found (2: No such file or directory), client: 24.232.66.54, server: _, request: "GET / HTTP/1.1", host: "ec2-54-175-20-104.compute-1.amazonaws.com"
+
+[ 2016-04-01 00:46:53.5140 18523/7fea33004700 age/Cor/CoreMain.cpp:532 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ 2016-04-01 00:46:53.5141 18523/7fea397d27c0 age/Cor/CoreMain.cpp:901 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ 2016-04-01 00:46:53.5141 18523/7fea32803700 Ser/Server.h:817 ]: [ApiServer] Freed 0 spare client objects
+[ 2016-04-01 00:46:53.5141 18523/7fea32803700 Ser/Server.h:464 ]: [ApiServer] Shutdown finished
+[ 2016-04-01 00:46:53.5142 18523/7fea33004700 Ser/Server.h:817 ]: [ServerThr.1] Freed 128 spare client objects
+[ 2016-04-01 00:46:53.5142 18523/7fea33004700 Ser/Server.h:464 ]: [ServerThr.1] Shutdown finished
+[ 2016-04-01 00:46:53.5148 18523/7fea397d27c0 age/Cor/CoreMain.cpp:967 ]: Passenger core shutdown finished
+
+[ 2016-04-01 00:46:53.5154 18528/7f0a55b62700 age/Ust/UstRouterMain.cpp:422 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ 2016-04-01 00:46:53.5154 18528/7f0a5c36b7c0 age/Ust/UstRouterMain.cpp:492 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ 2016-04-01 00:46:53.5154 18528/7f0a55361700 Ser/Server.h:817 ]: [UstRouterApiServer] Freed 0 spare client objects
+[ 2016-04-01 00:46:53.5154 18528/7f0a55361700 Ser/Server.h:464 ]: [UstRouterApiServer] Shutdown finished
+[ 2016-04-01 00:46:53.5156 18528/7f0a55b62700 Ser/Server.h:464 ]: [UstRouter] Shutdown finished
+[ 2016-04-01 00:46:53.5156 18528/7f0a5c36b7c0 age/Ust/UstRouterMain.cpp:523 ]: Passenger UstRouter shutdown finished
