@@ -1,0 +1,58 @@
+.container
+  .row
+    .span12
+      fieldset
+        legend Customize your Hiduino
+        #form= simple_form_for :firmware, url: firmwares_path do |f|
+          .control-group
+            = f.input :manufacturer_name
+          .control-group
+            = f.input :device_name, required: true
+          .control-group
+            = f.input :arduino_model, as: :select, collection: @arduino_models, label_method: lambda{ |m| m.humanize }, required: true, input_html: { title: 'Please select a model', class: 'selectpicker'}
+          .control-group
+            .controls
+              = f.button :submit, 'Compile!', class: 'btn btn-success', id: 'submit-button', data: { 'disable-with': 'Processing...' }
+        #message
+          label Firmware is being created, please do not refresh this page. Thanks!
+          p= link_to 'Create a new firmaware', root_path
+	#gotoytx
+	  br
+	  p= 'Pimp My Hiduino is a web tool that lets you compile the great HIDUINO firmware with whatever Device and Manufacturer name you want. Make your Ard$
+          p= 'Credits:'
+          p= ' · HIDUINO firmware by Dimitri Diakopoulos'
+          p= ' · PimpMyHiduino web tool by Pablo Fullana, Franco Grassano and Yaeltex.'
+          p= 'Visit HIDUINO website for more information.'
+          p= 'Have fun ;)'
+	  p= link_to 'yaeltex.com', "http://www.yaeltex.com", class: 'btn btn-success'
+	  br
+	  p= link_to 'github project hiduino', "http://github.com/ddiakopoulos/hiduino/", class: 'btn btn-success'
+	  br
+          p= link_to 'github project hiduino-app', "https://github.com/pablofullana/hiduino_confi", class: 'btn btn-success'
+	  
+
+javascript:
+  var ready = function() {
+    hideMessage();
+    $("#form").on("submit", function() {
+      hideButton();
+      displayMessage();
+    });
+  };
+
+  var hideButton = function() {
+    $("#submit-button").attr("disabled", "");
+    $("#submit-button").hide();
+  }
+
+  var displayMessage = function() {
+    $("#message").show();
+  }
+
+  var hideMessage = function() {
+    $("#message").hide();
+  }
+
+  $(document).ready(ready);
+  $(document).on('page:load', ready);
+  $(document).on('page:change', ready);
