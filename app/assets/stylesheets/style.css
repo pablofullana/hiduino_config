@@ -1,39 +1,48 @@
+#ytx-logo{
+    position: absolute;
+    left: 10%;
+}
 .container{
   margin-top: 40px;
 }
 #info{
-  width:100%;
-  margin: auto;
-  margin-right: 30px;
-  float: left;
+    width: 75%;
+    margin: auto;
+    margin-right: 30px;
+    min-height: 90px;
+    overflow: hidden;
 }
 
 #description{
-  width: 50%;
-  float: left;
-  margin: auto;
+    width: 50%;
+    float: left;
+    margin: auto;
+    margin-right: 20px;
 }
 #gotoytx{
-  margin: 10px; float:left;
+    margin: 20px 0px;
+    float: left;
 }
 #credits{
-  width:100%;
-  margin: auto;
-  margin-right: 30px;
-  float: left;
+    width: 75%;
+    margin: auto;
+    margin-right: 30px;
+    min-height: 200px;
+    overflow: hidden;
 }
 #credits-text{
   width: 50%;
   float: left;
   margin: auto;
+  margin-right: 20px;
 }
 #gotohiduino{
   margin: 10px;
-  float: left;
+  overflow: hidden;
 }
 #gotohidapp{
   margin: 10px;
-  float:left;
+  overflow: hidden;
 }
 .btn-ytx{
   background: #262324 !important;
@@ -44,3 +53,26 @@
   border-radius: 0px !important;
 }
 .btn-ytx:hover{color:#fff12c !important;}
+div.device {
+    width: 45%;
+    float: left;
+    margin: auto 4%;
+}
+div.manuf {
+    width: 45%;
+    overflow: hidden;
+    margin: auto 4%;
+}
+div.model {
+    width: 94%;
+    float: left;
+    margin: auto 4%;
+}
+div.compile {
+    margin: 15px 43%;
+    width: 14%;
+}
+.span12 {
+    margin: 0px auto;
+    width: 44%;
+}

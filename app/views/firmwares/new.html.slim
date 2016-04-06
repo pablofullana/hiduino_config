@@ -1,16 +1,17 @@
+img#ytx-logo src="https://yaeltex.com/wp-content/uploads/2016/04/ytx_pimpduino.png"
+legend.title Customize your Hiduino
 .container
   .row
     .span12
       fieldset
-        legend Customize your Hiduino
         #form= simple_form_for :firmware, url: firmwares_path do |f|
-          .control-group
-            = f.input :manufacturer_name, maxlength: 11
-          .control-group
+          .control-group.device
             = f.input :device_name, required: true, maxlength: 11
-          .control-group
+          .control-group.manuf
+            = f.input :manufacturer_name, maxlength: 11
+          .control-group.model
             = f.input :arduino_model, as: :select, collection: @arduino_models, label_method: lambda{ |m| m.humanize }, required: true, input_html: { title: 'Please select a model', class: 'selectpicker'}
-          .control-group
+          .control-group.compile
             .controls
               = f.button :submit, 'Compile!', class: 'btn btn-success btn-ytx', id: 'submit-button', data: { 'disable-with': 'Processing...' }
         #message
@@ -19,7 +20,7 @@
 	#info
           br
           #description
-            p= 'Pimp My Hiduino is a web tool that lets you compile the great HIDUINO firmware with whatever Device and Manufacturer name you want. Make your Arduino plug and play MIDI controllers look like professional hardware with HIDUINO + Pimp My Hiduino.'
+            p= 'Pimp My Hiduino is a web tool that lets you compile the great HIDUINO firmware with whatever Device and Manufacturer name you want. Make your Arduino plug and play MIDI controllers look like any other commercial hardware with HIDUINO + Pimp My Hiduino.'
           #gotoytx
             p= link_to 'Yaeltex.com', "http://www.yaeltex.com", class: 'btn btn-success btn-ytx', target: '_blank'
 	#credits
