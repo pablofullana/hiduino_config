@@ -3,11 +3,19 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 body {
-  background-color: #E2DFCD !important;
+  background-color: #eae9e9 !important;
+  font-family: 'Nunito', Arial, Helvetica, sans-serif !important;
 }
 
 legend {
   margin-top: 20px;
+  background: #D46344;
+  color: #fff !important;
   text-align: center;
   text-transform: uppercase;
+}
+.title{
+  border-color: #262324 !important;
+  border-top: 10px !important;
+  border-bottom: 10px !important;
 }
